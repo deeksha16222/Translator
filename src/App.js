@@ -1,13 +1,16 @@
-import React,{useState} from "react"
+import React, { useState } from "react";
 import Field from "./components/Field";
-import './App.css';
+import Languages from "./Languages";
+import "./App.css";
 
 function App() {
   const [language, setLanguage] = useState("es");
   const [text, setText] = useState("");
   return (
     <div>
-    <Field onChange={setText} />
+      <Field onChange={setText} />
+      <Languages language={language} onLanguageChange={setLanguage} />
+      <hr />
     </div>
   );
 }
